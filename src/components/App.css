@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  width: 60vw;
+  height: 100vh;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.addTask {
+  border: 5px solid #fff;
+  background-color: #6DA1D1;
+  padding: 35px 0 20px 0;
+  position: relative;
+  margin-top: 20px;
+}
+
+.addTask h2 {
+  border: 5px solid #fff;
+  background-color: #6DA1D1;
+  padding: 5px;
+  width: 70%;
+  text-transform: uppercase;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.addTask button {
+  margin-top: 20px;
+  padding: 5px 10px !important;
+  background-color:  #6DA1D1;
+}
+
+.addTask button:hover {
+  background-color:  rgb(71, 117, 160);
+}
+
+.addTask input {
+  margin-top:5px;
+  padding: 5px;
+}
+
+.addTask input:focus {
+ border: 2px solid black;
+}
+
+.activeTask {
+  border: 5px solid #fff;
+  background-color: #f68026;
+  margin: 50px 0;
+  padding: 30px;
+  position: relative;
+}
+
+.activeTask h3 {
+  border: 5px solid #fff;
+  background-color: #f68026;
+  padding: 5px;
+  width: 70%;
+  text-transform: uppercase;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.activeTask p {
+  padding: 5px 0;
+}
+
+.activeTask button,
+.doneTask button,
+.addTask button {
+  padding: 1px 5px;
+  margin: 3px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.activeTask button {
+  background-color: #f68026;
+}
+
+.activeTask button:hover{
+  background-color: #ca600f;
+}
+
+.doneTask {
+  border: 5px solid #fff;
+  background-color: #c3b703;
+  margin: 10px 0;
+  padding: 30px 0;
+  position: relative;
+}
+
+.doneTask h3 {
+  border: 5px solid #fff;
+  background-color: #c3b703;
+  padding: 5px;
+  width: 70%;
+  text-transform: uppercase;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.doneTask button {
+  background-color:  #c3b703;
+}
+
+.doneTask button:hover {
+  background-color:  #948a06;
+}
+
+.activeTasks-mobile,
+.doneTasks-mobile,
+.activeTasks-tablet {
+  display: none;
+}
+
+
+/* responsive design */
+
+@media (min-width: 668px) and (max-width: 768px) {
+  .activeTasks-tablet {
+    display: inline-block;
+  }
+
+  .activeTasks-desktop,
+  .activeTasks-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .addTask {
+    padding: 65px 0 20px 0;
+  }
+
+  .addTask input {
+    margin-top: 10px;
+  }
+
+  .activeTasks-desktop,
+  .doneTasks-desktop {
+    display: none;
+  }
+
+  .activeTasks-mobile,
+  .doneTasks-mobile {
+    display: inline-block;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+  }
+}
